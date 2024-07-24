@@ -19,12 +19,24 @@
 </head>
 <body>
     <div id="terminal"></div>
-
+    
     <script>
-        const text = '> Wintermute Software\n\n> Site Under Construction';
+        const text = `> Wintermute Software
+
+> Site Under Construction
+
+> retrieve contact information
+
+Contact Info
+-------------
+Phone Number: 281-508-1430
+Email: ryanh@wintermutesoftware.com
+Managing Member: Ryan Hotard
+Address: 30 N Gould St Ste R Sheridan, WY 82801, USA`;
+
         const terminal = document.getElementById('terminal');
         let index = 0;
-
+        
         function typeText() {
             if (index < text.length) {
                 terminal.textContent += text[index];
@@ -32,7 +44,7 @@
                 setTimeout(typeText, 50);
             }
         }
-
+        
         typeText();
     </script>
 </body>
