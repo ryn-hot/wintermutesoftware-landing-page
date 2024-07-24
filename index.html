@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wintermute Software</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: monospace;
+            padding: 20px;
+            margin: 0;
+        }
+        #terminal {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+
+    <script>
+        const text = '> Wintermute Software\n\n> Site Under Construction';
+        const terminal = document.getElementById('terminal');
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                terminal.textContent += text[index];
+                index++;
+                setTimeout(typeText, 50);
+            }
+        }
+
+        typeText();
+    </script>
+</body>
+</html>
